@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donating</title>
+    <script src="file.js" ></script>
+    <link rel="stylesheet" href="file.css">
+</head>
+<body>
+    <b><h1 id="heading" style="text-align: center; color: #10303f;"> Make Your Donation</h1></b>
+    <!-- <p>Thank you for considering a donation!</p> -->
+     <p style="text-align:center" >Your generous contribution helps us continue our mission. Every Rupee makes a difference in the lives of those we serve.</p>   
+    <br>
+    <br>
+   <div id="donation-form">
+       
+    <form action="/donate" method="post">
+        <div id="donation">
+        <label for="amount">Donation Amount:</label>
+        <input type="number" id="amount" name="amount" required min="0" start="100" placeholder="Enter donation amount">
+        <br>
+
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required placeholder="Enter your name">
+        <br>
+
+        <label for="email">Email:</label>   
+        <input type="email" id="email" name="email" required placeholder="Enter your email">
+        <br>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" cols="50" placeholder="Message(optional)"></textarea>
+        <br>
+
+        <label for="payment-method">Payment Method:</label>
+        <select id="payment-method" name="payment-method" required>
+            <option value="" disabled selected>Select a payment method</option>
+            <option value="credit-card">Credit Card</option>
+            <option value="paypal">PayPal</option>
+            <option value="bank-transfer">Bank Transfer</option>
+        </select>
+                     
+        <br>
+        <button type="submit">Donate</button>
+        </div>
+    </form>
+    <div>
+    
+</body>
+</html>
