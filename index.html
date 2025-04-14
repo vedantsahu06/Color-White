@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="index.js" defer></script>
+    <link rel="stylesheet" href="index.css" />
+    
+  </head>
+  <body>
+    <div id="loading-screen">
+      <img id="loading-image" src="assests/heart-pulse-svgrepo-com.svg" alt="Loading...">
+      <div id="progress-container">
+          <div id="progress-bar"></div>
+      </div>
+      <p>Loading...</p>
+    </div>
+    
+    <!-- <div class="alert">
+      <div class="alert-header">
+        <img src="assests/alert-triangle-svgrepo-com.svg" alt="Alert Icon" />
+        <div class="alert-title-group">
+          <h5>EMERGENCY ALERT</h5>
+          <div id="alert-date-time">April 13, 2025 - 16:05</div>
+        </div>
+      </div>
+      <div id="alert-warning">
+        URGENT: Air raid warning in effect for Northern and Central regions.
+        Seek shelter immediately.
+      </div>
+    </div> -->
+
+    <!-- <div class="navbar">
+      <div class="logo-title">
+        <img src="/assests/icons8-bell-50.svg" alt="bell" />
+        <div class="title">Safety Watch: Beacon Alerts</div>
+      </div>
+      <div class="navbar-links">
+        <div>
+          <img src="/assests/home-svgrepo-com.svg" alt="home" class="navbar-icons"/>
+          <a href="#">Home</a>
+          <img src="/assests/info-circle-svgrepo-com.svg" alt="home" class="navbar-icons"/>
+          <a href="#footer" >About</a>
+          <img src="/assests/alert-triangle-svgrepo-com.svg" alt="home" class="navbar-icons"/>
+          <a href="/alerts/alerts.html">Alerts</a>
+          <img src="/assests/heart-pulse-svgrepo-com.svg" alt="home" class="navbar-icons"/>
+          <a href="/donate/donate.html">Donate</a>
+          <img src="/assests/login-svgrepo-com.svg" alt="home" class="navbar-icons"/>
+          <a href="/login/login.html">Login</a>
+        </div>
+      </div>
+    </div> -->
+
+    <div class="navbar">
+      <div class="logo-title">
+        <img src="/assests/icons8-bell-50.svg" alt="bell" />
+        <div class="title">Safety Watch: <span class="sub-title">Beacon Alerts</span></div>
+      </div>
+      <div class="navbar-links">
+        
+        <img src="/assests/home-svgrepo-com.svg" alt="home" class="navbar-icon" />
+        <a href="#">Home</a>
+        <img src="/assests/info-circle-svgrepo-com.svg" alt="about" class="navbar-icon" />
+        <a href="#footer">about</a>
+        <img src="/assests/alert-triangle-svgrepo-com.svg" alt="alerts" class="navbar-icon" />
+        <a href="/alerts/alerts.html">alerts</a>
+        <img src="/assests/heart-pulse-svgrepo-com.svg" alt="donate" class="navbar-icon" />
+        <a href="/donate/donate.html">donate</a>
+        <img src="/assests/people-svgrepo-com.svg" alt="lost & found" class="navbar-icon" />
+        <a href="/lost/lost.html">Lost & Found</a>
+        <img src="/assests/login-svgrepo-com.svg" alt="login" class="navbar-icon" />
+        <a href="login/login.html" id="login-button-navbar">login</a>
+        
+
+
+
+
+      </div>
+    </div>
+    
+
+    <div class="container">
+      <div class="header">Current Emergency Status</div>
+      <div class="alert-level">Level: HIGH - Active Conflict Zone</div>
+      <div class="description">
+        Several regions are currently affected by military operations. Stay
+        alert and follow all government instructions. The situation is evolving
+        rapidly, and updates will be posted as soon as they become available.Multiple regions across Ukraine are experiencing ongoing attacks, including civilian infrastructure damage and disruptions to essential services.
+
+
+      </div>
+      <div class="info-box">
+        <div class="info-item">
+          <h3>Curfew Hours</h3>
+          <p>8 PM - 6 AM</p>
+        </div>
+        <div class="info-item">
+          <h3>Alert Level</h3>
+          <p class="info-item-alert-level">HIGH</p>
+        </div>
+        <div class="info-item">
+          <h3>Affected Regions</h3>
+          <p>5</p>
+        </div>
+      </div>
+      
+      <div class="description">
+        <h3>Safety recommendations</h3>
+        - Monitor local media for updates
+        - Identify shelter locations in advance of any air alert
+        - Immediately take shelter if an air alert is announced
+        - Follow the directions of Ukrainian officials and first responders in the event of an emergency
+      </div>
+
+
+      </div>
+    </div>
+
+    <!-- count -->
+    <h1>Live Conflict Death Count (Estimated)</h1>
+  <div class="grid" id="counterGrid"></div>
+
+  <script>
+    const conflicts = [
+      { location: "Gaza", count: 34000 },
+      { location: "Ukraine", count: 300000 },
+      { location: "Syria", count: 500000 },
+      { location: "Sudan", count: 15000 },
+      { location: "Yemen", count: 377000 },
+      { location: "Myanmar", count: 31000 }
+    ];
+
+    const grid = document.getElementById("counterGrid");
+
+    conflicts.forEach((conflict, index) => {
+      const card = document.createElement("div");
+      card.className = "card";
+
+      const location = document.createElement("div");
+      location.className = "location";
+      location.textContent = conflict.location;
+
+      const countContainer = document.createElement("div");
+      countContainer.className = "count";
+      countContainer.id = `count-${index}`;
+
+      const label = document.createElement("div");
+      label.className = "label";
+      label.textContent = "Deaths (Estimated)";
+
+      card.appendChild(location);
+      card.appendChild(countContainer);
+      card.appendChild(label);
+      grid.appendChild(card);
+
+      updateDigits(countContainer, conflict.count);
+    });
+
+    function updateDigits(container, number) {
+      container.innerHTML = '';
+      const str = number.toLocaleString();
+
+      for (let i = 0; i < str.length; i++) {
+        const char = str[i];
+        const wrapper = document.createElement("span");
+        wrapper.className = "digit";
+
+        if (/\d/.test(char)) {
+          if (i === str.length - 1) {
+            // Animated + slightly raised last digit
+            const flip = document.createElement("span");
+            flip.className = "digit-flip";
+            const animatedDigit = document.createElement("span");
+            animatedDigit.textContent = char;
+            flip.appendChild(animatedDigit);
+            wrapper.appendChild(flip);
+          } else {
+            wrapper.textContent = char;
+          }
+        } else {
+          wrapper.textContent = char;
+        }
+
+        container.appendChild(wrapper);
+      }
+    }
+
+    setInterval(() => {
+      conflicts.forEach((conflict, index) => {
+        const increment = Math.floor(Math.random() * 5);
+        conflict.count += increment;
+        const container = document.getElementById(`count-${index}`);
+        updateDigits(container, conflict.count);
+      });
+    }, 4000);
+  </script>
+
+
+
+
+
+
+
+    <div class="map" style="background-color:#28282b height=80vh;padding: 0px;margin: 0px;">
+
+      <iframe src="/map.html" width="100%" height="800px" style="border: none;background-color:#28282b"></iframe>
+
+
+    </div>
+
+
+
+
+    <div class="main-distress-container">
+      <div class="form-container">
+        <section class="form-section">
+          <h2>🚨 Report a Distress Situation</h2>
+          <form id="distressForm">
+            <input type="text" placeholder="Enter your name" required id="name" />
+            <input type="text" placeholder="Phone or email for follow-up" id="contact" />
+            <input type="text" placeholder="Specify your location" required id="location" />
+  
+            <select id="type">
+              <option value="Medical">Medical</option>
+              <option value="Food">Food</option>
+              <option value="Security">Security Threat</option>
+            </select>
+  
+            <select id="severity" required>
+              <option value="" disabled selected>Select Severity</option>
+              <option value="Low">Low</option>
+              <option value="Medium">Medium</option>
+              <option value="High">High</option>
+            </select>
+  
+            <textarea placeholder="Describe your situation in detail" required id="message"></textarea>
+            <button type="submit">📤 Send Distress Message</button>
+          </form>
+        </section>
+  
+        <section class="messages-section">
+          <h2>❗ Distress Messages</h2>
+          <div id="messagesContainer" class="messages"></div>
+        </section>
+      </div>
+    </div>
+  
+  
+    <script src="script.js"></script>
+
+    <div class="news-container">
+      <h2><span class="alert-icon">🔔</span> Latest Alerts</h2>
+
+      <div class="alert-box curfew">
+        <div class="alert-header news">
+          <h3>armed clases & humanitarian Crisis</h3>
+          <span class="tag red">CRITICAL</span>
+        </div>
+        <div class="meta">
+          <span>📍 somalia</span> •
+          <span>April 13, 2025 - 14:30</span>
+        </div>
+        <p>
+          Somalia faces severe displacement due to inter-clan violence and ongoing armed conflicts. Hospitals are overwhelmed, and humanitarian aid is struggling to reach affected populations.
+        </p>
+      </div>
+
+      <div class="alert-box evacuation">
+        <div class="alert-header">
+          <h3>Ongoing Conflict</h3>
+          <span class="tag red">EXETREME</span>
+        </div>
+        <div class="meta">
+          <span>📍 Yemen</span> • <span>April 12, 2025 - 08:15</span>
+        </div>
+        <p>
+          The humanitarian crisis in Yemen remains severe, with 23 million people in need of urgent assistance. Armed conflict continues to displace civilians, and food insecurity is at an all-time high.
+
+        </p>
+      </div>
+
+      <div class="alert-box update">
+        <div class="alert-header nws">
+          <h3>Ongoing Conflict & Humanitarian Crisi</h3>
+          <span class="tag blue">CRITICAL</span>
+        </div>
+        <div class="meta">
+          <span>📍 Gaza and the West Bank </span> • <span>April 11, 2025 - 16:45</span>
+        </div>
+        <p>
+          The situation in Gaza and the West Bank remains dire, with intense military operations and severe restrictions on humanitarian aid. Hospitals are overwhelmed, and civilian casualties continue to rise.
+
+
+        </p>
+      </div>
+
+      <div class="alert-box update">
+        <div class="alert-header nws">
+          <h3> Active War Zone</h3>
+          <span class="tag blue">CRITICAL</span>
+        </div>
+        <div class="meta">
+          <span>📍Kharkiv, Sumy, Zaporizhzhia, Donetsk, Kherson</span> • <span>April 11, 2025 - 16:45</span>
+        </div>
+        <p>
+          Ukraine continues to experience intense hostilities, with mandatory evacuations in frontline areas. Millions remain displaced, and humanitarian aid is urgently needed.
+
+
+
+
+        </p>
+      </div>
+    </div>
+
+    <div class="list-container">
+      <div class="list-title">Help Those Affected</div>
+      <div class="list-content">
+        <p>Your donation helps provide:</p>
+        <ul>
+          <li>Emergency shelter and safe housing for displaced families</li>
+          <li>Food, clean water, and essential supplies</li>
+          <li>Medical care and emergency health services</li>
+          <li>Support for children who have lost parents or caregivers</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- <footer class="footer" id="footer">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>
+            <span class="footer-icon">🔔</span> Safety Watch: Beacon Alerts
+          </h3>
+          <p>
+            Providing critical alerts and information during emergencies. Stay
+            informed, stay safe.
+          </p>
+        </div>
+
+        <div class="footer-section">
+          <h3>Emergency Contacts</h3>
+          <p>📞 Emergency Hotline: <strong>1-800-SAFE-NOW</strong></p>
+          <p>
+            📧 Report Critical Information: <br /><strong
+              >report@safetywatch.org</strong
+            >
+          </p>
+        </div>
+
+        <div class="footer-section">
+          <h3>Stay Updated</h3>
+          <p>Sign up to receive real-time alerts directly to your device.</p>
+          <form class="subscribe-form">
+            <input type="email" placeholder="Your email" required /><br />
+            <button style="align-items: flex-end" type="submit">
+              Subscribe
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2025 Safety Watch: Beacon Alerts. All rights reserved.</p>
+      </div>
+    </footer> -->
+    <footer class="footer" id="footer">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3><span class="footer-icon">🔔</span> Safety Watch: Beacon Alerts</h3>
+          <p>Providing critical alerts and information during emergencies. Stay informed, stay safe.</p>
+        </div>
+    
+        <div class="footer-section">
+          <h3>Emergency Contacts</h3>
+          <p>📞 Emergency Hotline: <strong>1-800-SAFE-NOW</strong></p>
+          <p>📧 Report Critical Information: <br><strong>report@safetywatch.org</strong></p>
+        </div>
+    
+        <div class="footer-section">
+          <h3>Stay Updated</h3>
+          <p>Sign up to receive real-time alerts directly to your device.</p>
+          <form class="subscribe-form">
+            <input type="email" placeholder="Your email" required>
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    
+      <div class="footer-bottom">
+        <p>© 2025 Safety Watch: Beacon Alerts. All rights reserved.</p>
+      </div>
+    </footer>
+
+    
+
+    
+  </body>
+</html>
