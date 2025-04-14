@@ -1,54 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <script src="index.js" defer></script> 
-    <link rel="stylesheet" href="index.css">
-</head>
-<body>
-    <div class="alert">
-        <div class="alert-header">
-            <img src="alert-triangle-svgrepo-com.svg" alt="Alert Icon" >
-            <h5>EMERGENCY ALERT</h5>
-            <span>April 13, 2025 - 16:05</span>
-        </div>
-        <p>URGENT: Air raid warning in effect for Northern and Central regions. Seek shelter immediately.</p>
-    </div>
-    <div class="navbar">
-        <div>
-            <div class="title">Safety Watch: Beacon Alerts</div>
-        </div>
-            
+    <script src="index.js" defer></script>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
 
-        <div>
-            <a href="#">Home</a>
-            <a href="#">About</a>
-        </div>  
+
+    <!-- <div class="alert">
+      <div class="alert-header">
+        <img src="assests/alert-triangle-svgrepo-com.svg" alt="Alert Icon" />
+        <div class="alert-title-group">
+          <h5>EMERGENCY ALERT</h5>
+          <div id="alert-date-time">April 13, 2025 - 16:05</div>
+        </div>
+      </div>
+      <div id="alert-warning">
+        URGENT: Air raid warning in effect for Northern and Central regions.
+        Seek shelter immediately.
+      </div>
+    </div> -->
+
+    <div class="navbar">
+      <div class="logo-title">
+        <img src="/assests/icons8-bell-50.svg" alt="bell" />
+        <div class="title">Safety Watch: Beacon Alerts</div>
+      </div>
+      <div class="navbar-links">
+        <a href="#">Home</a>
+        <a href="#footer" >About</a>
+        <a href="/alerts/alerts.html">Alerts</a>
+        <a href="/donate/donate.html">Donate</a>
+        <a href="/login/login.html">Login</a>
+      </div>
     </div>
-   
+
     <div class="container">
-        <div class="header">Current Emergency Status</div>
-        <div class="alert-level">Level: HIGH - Active Conflict Zone</div>
-        <div class="description">
-            Several regions are currently affected by military operations. Stay alert and follow all government instructions. The situation is evolving rapidly, and updates will be posted as soon as they become available.
+      <div class="header">Current Emergency Status</div>
+      <div class="alert-level">Level: HIGH - Active Conflict Zone</div>
+      <div class="description">
+        Several regions are currently affected by military operations. Stay
+        alert and follow all government instructions. The situation is evolving
+        rapidly, and updates will be posted as soon as they become available.
+      </div>
+      <div class="info-box">
+        <div class="info-item">
+          <h3>Curfew Hours</h3>
+          <p>8 PM - 6 AM</p>
         </div>
-        <div class="info-box">
-            <div class="info-item">
-                <h3>Curfew Hours</h3>
-                <p>8 PM - 6 AM</p>
-            </div>
-            <div class="info-item">
-                <h3>Alert Level</h3>
-                <p class="info-item-alert-level">HIGH</p>
-            </div>
-            <div class="info-item">
-                <h3>Affected Regions</h3>
-                <p>12</p>
-            </div>
+        <div class="info-item">
+          <h3>Alert Level</h3>
+          <p class="info-item-alert-level">HIGH</p>
         </div>
+        <div class="info-item">
+          <h3>Affected Regions</h3>
+          <p>12</p>
+        </div>
+      </div>
     </div>
+
+
+
+
+
+
 
     <div class="main-distress-container">
       <div class="form-container">
@@ -58,126 +76,162 @@
             <input type="text" placeholder="Enter your name" required id="name" />
             <input type="text" placeholder="Phone or email for follow-up" id="contact" />
             <input type="text" placeholder="Specify your location" required id="location" />
+  
             <select id="type">
               <option value="Medical">Medical</option>
               <option value="Food">Food</option>
               <option value="Security">Security Threat</option>
             </select>
-            <div class="severity">
-              <label><input type="radio" name="severity" value="Low" required /> Low</label>
-              <label><input type="radio" name="severity" value="Medium" /> Medium</label>
-              <label><input type="radio" name="severity" value="High" /> High</label>
-            </div>
+  
+            <select id="severity" required>
+              <option value="" disabled selected>Select Severity</option>
+              <option value="Low">Low</option>
+              <option value="Medium">Medium</option>
+              <option value="High">High</option>
+            </select>
+  
             <textarea placeholder="Describe your situation in detail" required id="message"></textarea>
             <button type="submit">📤 Send Distress Message</button>
           </form>
         </section>
-    
+  
         <section class="messages-section">
           <h2>❗ Distress Messages</h2>
           <div id="messagesContainer" class="messages"></div>
         </section>
       </div>
     </div>
-
-
+  
   
     <script src="script.js"></script>
 
     <div class="news-container">
-        <h2><span class="alert-icon">🔔</span> Latest Alerts</h2>
-    
-        <div class="alert-box curfew">
-          <div class="alert-header news">
-            <h3>Curfew Extended in Eastern Districts</h3>
-            <span class="tag red">Curfew</span>
-          </div>
-          <div class="meta">
-            <span>📍 Eastern Districts</span> • <span>April 13, 2025 - 14:30</span>
-          </div>
-          <p>The government has extended the curfew in all eastern districts until further notice. All residents must remain indoors between 8 PM and 6 AM. Emergency services will remain operational.</p>
+      <h2><span class="alert-icon">🔔</span> Latest Alerts</h2>
+
+      <div class="alert-box curfew">
+        <div class="alert-header news">
+          <h3>Curfew Extended in Eastern Districts</h3>
+          <span class="tag red">Curfew</span>
         </div>
-    
-        <div class="alert-box evacuation">
-          <div class="alert-header">
-            <h3>Evacuation Order for Coastal Regions</h3>
-            <span class="tag red">Evacuation</span>
-          </div>
-          <div class="meta">
-            <span>📍 Coastal Regions</span> • <span>April 12, 2025 - 08:15</span>
-          </div>
-          <p>Immediate evacuation ordered for all residents within 5 miles of the coast due to potential artillery threats. Evacuation centers are open at Central High School and Memorial Stadium.</p>
+        <div class="meta">
+          <span>📍 Eastern Districts</span> •
+          <span>April 13, 2025 - 14:30</span>
         </div>
-    
-        <div class="alert-box update">
-          <div class="alert-header nws">
-            <h3>Air Raid Warning System Testing</h3>
-            <span class="tag blue">Situation Update</span>
-          </div>
-          <div class="meta">
-            <span>📍 All Districts</span> • <span>April 11, 2025 - 16:45</span>
-          </div>
-          <p>The air raid warning system will be tested tomorrow between 10 AM and 11 AM. This is only a test. No action is required from residents.</p>
+        <p>
+          The government has extended the curfew in all eastern districts until
+          further notice. All residents must remain indoors between 8 PM and 6
+          AM. Emergency services will remain operational.
+        </p>
+      </div>
+
+      <div class="alert-box evacuation">
+        <div class="alert-header">
+          <h3>Evacuation Order for Coastal Regions</h3>
+          <span class="tag red">Evacuation</span>
+        </div>
+        <div class="meta">
+          <span>📍 Coastal Regions</span> • <span>April 12, 2025 - 08:15</span>
+        </div>
+        <p>
+          Immediate evacuation ordered for all residents within 5 miles of the
+          coast due to potential artillery threats. Evacuation centers are open
+          at Central High School and Memorial Stadium.
+        </p>
+      </div>
+
+      <div class="alert-box update">
+        <div class="alert-header nws">
+          <h3>Air Raid Warning System Testing</h3>
+          <span class="tag blue">Situation Update</span>
+        </div>
+        <div class="meta">
+          <span>📍 All Districts</span> • <span>April 11, 2025 - 16:45</span>
+        </div>
+        <p>
+          The air raid warning system will be tested tomorrow between 10 AM and
+          11 AM. This is only a test. No action is required from residents.
+        </p>
+      </div>
+    </div>
+
+    <div class="list-container">
+      <div class="list-title">Help Those Affected</div>
+      <div class="list-content">
+        <p>Your donation helps provide:</p>
+        <ul>
+          <li>Emergency shelter and safe housing for displaced families</li>
+          <li>Food, clean water, and essential supplies</li>
+          <li>Medical care and emergency health services</li>
+          <li>Support for children who have lost parents or caregivers</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- <footer class="footer" id="footer">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>
+            <span class="footer-icon">🔔</span> Safety Watch: Beacon Alerts
+          </h3>
+          <p>
+            Providing critical alerts and information during emergencies. Stay
+            informed, stay safe.
+          </p>
+        </div>
+
+        <div class="footer-section">
+          <h3>Emergency Contacts</h3>
+          <p>📞 Emergency Hotline: <strong>1-800-SAFE-NOW</strong></p>
+          <p>
+            📧 Report Critical Information: <br /><strong
+              >report@safetywatch.org</strong
+            >
+          </p>
+        </div>
+
+        <div class="footer-section">
+          <h3>Stay Updated</h3>
+          <p>Sign up to receive real-time alerts directly to your device.</p>
+          <form class="subscribe-form">
+            <input type="email" placeholder="Your email" required /><br />
+            <button style="align-items: flex-end" type="submit">
+              Subscribe
+            </button>
+          </form>
         </div>
       </div>
 
-    
-    <div class="list-container">
-        <div class="list-title">Help Those Affected</div>
-        <div class="list-content">
-            <p>Your donation helps provide:</p>
-            <ul>
-                <li>Emergency shelter and safe housing for displaced families</li>
-                <li>Food, clean water, and essential supplies</li>
-                <li>Medical care and emergency health services</li>
-                <li>Support for children who have lost parents or caregivers</li>
-            </ul>
+      <div class="footer-bottom">
+        <p>© 2025 Safety Watch: Beacon Alerts. All rights reserved.</p>
+      </div>
+    </footer> -->
+    <footer class="footer" id="footer">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3><span class="footer-icon">🔔</span> Safety Watch: Beacon Alerts</h3>
+          <p>Providing critical alerts and information during emergencies. Stay informed, stay safe.</p>
         </div>
-    </div>
-
-
-
     
-
-    
-
-
-    
-    <div>
-        <button id="donate"> Donate</button>"
-    </div>
-
-
-    <footer class="footer">
-        <div class="footer-content">
-          <div class="footer-section">
-            <h3><span class="footer-icon">🔔</span> Safety Watch: Beacon Alerts</h3>
-            <p>Providing critical alerts and information during emergencies. Stay informed, stay safe.</p>
-          </div>
-      
-          <div class="footer-section">
-            <h3>Emergency Contacts</h3>
-            <p>📞 Emergency Hotline: <strong>1-800-SAFE-NOW</strong></p>
-            <p>📧 Report Critical Information: <br><strong>report@safetywatch.org</strong></p>
-          </div>
-      
-          <div class="footer-section">
-            <h3>Stay Updated</h3>
-            <p>Sign up to receive real-time alerts directly to your device.</p>
-            <form class="subscribe-form">
-              <input type="email" placeholder="Your email" required>
-              <button type="submit">Subscribe</button>
-            </form>
-          </div>
+        <div class="footer-section">
+          <h3>Emergency Contacts</h3>
+          <p>📞 Emergency Hotline: <strong>1-800-SAFE-NOW</strong></p>
+          <p>📧 Report Critical Information: <br><strong>report@safetywatch.org</strong></p>
         </div>
-      
-        <div class="footer-bottom">
-          <p>© 2025 Safety Watch: Beacon Alerts. All rights reserved.</p>
+    
+        <div class="footer-section">
+          <h3>Stay Updated</h3>
+          <p>Sign up to receive real-time alerts directly to your device.</p>
+          <form class="subscribe-form">
+            <input type="email" placeholder="Your email" required>
+            <button type="submit">Subscribe</button>
+          </form>
         </div>
-      </footer>
-
-  
-
-
-</body>
+      </div>
+    
+      <div class="footer-bottom">
+        <p>© 2025 Safety Watch: Beacon Alerts. All rights reserved.</p>
+      </div>
+    </footer>
+    
+  </body>
 </html>
