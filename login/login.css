@@ -1,0 +1,191 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #28282b;
+}
+html{
+  overflow-x: hidden;
+}
+
+.navbar {
+  background-color: #ffffff;
+  color: #000;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 12vh;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.logo-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.sub-title {
+  font-weight: 300;
+  margin-left: 5px;
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-right: 50px;
+}
+
+.navbar a {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #007bff;
+}
+
+.navbar-icon{
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  padding: 5px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.navbar-icon:hover {
+  background-color: #f0f0f0;
+  transform: scale(1.1);
+}
+
+/* login form*/
+
+
+.login-container {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    max-width: 400px;
+    width: 100%;
+    display: flex-column;
+    margin: 0 auto;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+
+}
+
+  
+  .login-form h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    text-align: center;
+  }
+  
+  .login-form p {
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .login-form a {
+    color: #000;
+    text-decoration: none;
+  }
+  
+  label {
+    font-weight: 600;
+    display: block;
+    margin-top: 1rem;
+    margin-bottom: 0.3rem;
+  }
+  
+  .input-group {
+    display: flex;
+    align-items: center;
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+    padding: 0.5rem;
+    background-color: #f9fafb;
+  }
+  
+  .input-group .icon {
+    margin-right: 0.5rem;
+    color: #9ca3af;
+  }
+  
+  .input-group input {
+    border: none;
+    background: transparent;
+    outline: none;
+    width: 100%;
+  }
+  
+  .forgot {
+    text-align: left;
+    margin-top: 0.5rem;
+  }
+  
+  .btn {
+    width: 100%;
+    padding: 0.75rem;
+    margin-top: 1rem;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .btn.primary {
+    background-color: #0f172a;
+    color: white;
+  }
+  
+  .divider {
+    text-align: center;
+    margin: 1.5rem 0;
+    color: #6b7280;
+    font-size: 0.9rem;
+    position: relative;
+  }
+  
+  .divider span {
+    background: #fff;
+    padding: 0 1rem;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .divider::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: #e5e7eb;
+    z-index: 0;
+  }
+  
+  .social-buttons {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .social-buttons .btn {
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    flex: 1;
+  }

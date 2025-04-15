@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="login.css">
+  <script src="login.js" defer></script>
+</head>
+
+<body>
+  <div class="navbar">
+    <div class="logo-title">
+      <img src="/assests/icons8-bell-50.svg" alt="bell" />
+      <div class="title">Safety Watch: <span class="sub-title">Beacon Alerts</span></div>
+    </div>
+    <div class="navbar-links">
+      
+      <img src="/assests/home-svgrepo-com.svg" alt="home" class="navbar-icon" />
+      <a href="#">Home</a>
+      <img src="/assests/info-circle-svgrepo-com.svg" alt="about" class="navbar-icon" />
+      <a href="#footer">about</a>
+      <img src="/assests/alert-triangle-svgrepo-com.svg" alt="alerts" class="navbar-icon" />
+      <a href="/alerts/alerts.html">alerts</a>
+      <img src="/assests/heart-pulse-svgrepo-com.svg" alt="donate" class="navbar-icon" />
+      <a href="/donate/donate.html">donate</a>
+      <img src="/assests/people-svgrepo-com.svg" alt="lost & found" class="navbar-icon" />
+      <a href="/lost/lost.html">Lost & Found</a>
+      <img src="/assests/login-svgrepo-com.svg" alt="login" class="navbar-icon" />
+      <a href="login/login.html" id="login-button-navbar">login</a>
+      
+
+
+
+
+    </div>
+  </div>
+
+  <div class="login-container">
+    <form class="login-form">
+      <h2>Sign in to your account</h2>
+      <p>Or <a href="#">create a new account</a></p>
+
+      <label for="email">Email</label>
+      <div class="input-group">
+        <span class="icon">📧</span>
+        <input type="email" id="email" placeholder="you@example.com" required />
+      </div>
+
+      <label for="password">Password</label>
+      <div class="input-group">
+        <span class="icon">🔒</span>
+        <input type="password" id="password" placeholder="Enter your password" required />
+      </div>
+
+      <div class="forgot">
+        <a href="#">Forgot your password?</a>
+      </div>
+
+      <button type="submit" class="btn primary" onclick="signup()">Sign in</button>
+
+      <div class="divider"><span>Or continue with</span></div>
+
+      <div class="social-buttons">
+        <button class="btn">Google</button>
+        <button class="btn">Facebook</button>
+      </div>
+    </form>
+  </div>
+
+
+</body>
+
+</html>
