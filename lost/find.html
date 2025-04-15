@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search by Photo</title>
+  <link rel="stylesheet" href="find.css">
+</head>
+<body>
+
+  <div class="navbar">
+    <div class="logo-title">
+      <img src="/assests/icons8-bell-50.svg" alt="bell" />
+      <div class="title">Safety Watch: <span class="sub-title">Beacon Alerts</span></div>
+    </div>
+    <div class="navbar-links">
+      
+      <img src="/assests/home-svgrepo-com.svg" alt="home" class="navbar-icon" />
+      <a href="#">Home</a>
+      <img src="/assests/info-circle-svgrepo-com.svg" alt="about" class="navbar-icon" />
+      <a href="#footer">about</a>
+      <img src="/assests/alert-triangle-svgrepo-com.svg" alt="alerts" class="navbar-icon" />
+      <a href="/alerts/alerts.html">alerts</a>
+      <img src="/assests/heart-pulse-svgrepo-com.svg" alt="donate" class="navbar-icon" />
+      <a href="/donate/donate.html">donate</a>
+      <img src="/assests/people-svgrepo-com.svg" alt="lost & found" class="navbar-icon" />
+      <a href="/lost/lost.html">Lost & Found</a>
+      <img src="/assests/login-svgrepo-com.svg" alt="login" class="navbar-icon" />
+      <a href="login/login.html" id="login-button-navbar">login</a>
+      
+
+
+
+
+    </div>
+  </div>
+
+<div class="container">
+  <div class="upload-section" onclick="document.getElementById('photoInput').click()">
+    <input type="file" id="photoInput" accept="image/png, image/jpeg, image/gif" />
+    <div class="icon">⬆️</div>
+    <p><strong>Click to upload a photo for searching</strong></p>
+    <small>PNG, JPG, GIF up to 5MB</small>
+    <button class="search-btn">🔍 Search Database</button>
+  </div>
+
+  <div class="info-section">
+    <h3>How Photo Search Works</h3>
+    <div class="info-step"><strong>1. Upload a photo</strong> - Provide a clear, recent photo of the person you're looking for</div>
+    <div class="info-step"><strong>2. Advanced scanning</strong> - Our system uses facial recognition to compare with reported missing persons</div>
+    <div class="info-step"><strong>3. Review results</strong> - Examine potential matches ranked by similarity percentage</div>
+    <div class="info-step"><strong>4. Contact authorities</strong> - If you find a potential match, we'll help connect you with the appropriate authorities</div>
+    <div class="note">⚠️ This search is intended to help identify potential matches during emergencies. Results are not conclusive and should be verified through proper channels.</div>
+  </div>
+</div>
+
+
+<footer class="footer" id="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3><span class="footer-icon">🔔</span> Safety Watch: Beacon Alerts</h3>
+        <p>Providing critical alerts and information during emergencies. Stay informed, stay safe.</p>
+      </div>
+  
+      <div class="footer-section">
+        <h3>Emergency Contacts</h3>
+        <p>📞 Emergency Hotline: <strong>1-800-SAFE-NOW</strong></p>
+        <p>📧 Report Critical Information: <br><strong>report@safetywatch.org</strong></p>
+      </div>
+  
+      <div class="footer-section">
+        <h3>Stay Updated</h3>
+        <p>Sign up to receive real-time alerts directly to your device.</p>
+        <form class="subscribe-form">
+          <input type="email" placeholder="Your email" required>
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+  
+    <div class="footer-bottom">
+      <p>© 2025 Safety Watch: Beacon Alerts. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

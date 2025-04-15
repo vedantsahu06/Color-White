@@ -1,0 +1,242 @@
+body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      padding: 0px;
+      margin:0px;
+      
+    }
+
+    html{
+        overflow-x: hidden;
+    }
+
+
+
+    .container {
+      display: flex;
+      background: #fafaff;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      padding: 30px;
+      max-width: 1000px;
+      margin: auto;
+      margin-top: 25px;
+    }
+
+    .upload-section {
+      flex: 1;
+      border: 2px dashed #ccc;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 40px;
+      margin-right: 30px;
+      cursor: pointer;
+      transition: border-color 0.3s;
+    }
+
+    .upload-section:hover {
+      border-color: #888;
+    }
+
+    .upload-section input {
+      display: none;
+    }
+
+    .upload-section .icon {
+      font-size: 40px;
+      color: #999;
+    }
+
+    .upload-section p {
+      margin: 10px 0 0;
+      font-size: 16px;
+    }
+
+    .upload-section small {
+      color: #777;
+    }
+
+    .search-btn {
+      margin-top: 20px;
+      padding: 12px 20px;
+      background: #70727c;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .info-section {
+      flex: 1;
+    }
+
+    .info-section h3 {
+      margin-top: 0;
+    }
+
+    .info-step {
+      margin-bottom: 15px;
+    }
+
+    .info-step strong {
+      display: inline-block;
+      margin-right: 5px;
+      color: #0056b3;
+    }
+
+    .note {
+      margin-top: 20px;
+      padding-top: 10px;
+      border-top: 1px solid #ccc;
+      font-size: 14px;
+      color: #b36d00;
+    }
+
+    
+.navbar {
+    background-color: #ffffff;
+    color: #000;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 12vh;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+  
+  .logo-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+  
+  .sub-title {
+    font-weight: 300;
+    margin-left: 5px;
+  }
+  
+  .navbar-links {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-right: 50px;
+  }
+  
+  .navbar a {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar a:hover {
+    color: #007bff;
+  }
+  
+  .navbar-icon{
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    padding: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .navbar-icon:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.1);
+  }
+
+
+
+  .footer {
+    background-color: #0d1117;
+    color: #ffffff;
+    padding: 40px 20px 20px;
+    font-family: Arial, sans-serif;
+    width:100vw;
+    margin-top: 30px;
+  }
+  
+  .footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .footer-section {
+    flex: 1 1 250px;
+  }
+  
+  .footer h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .footer p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  
+  .footer-icon {
+    color: red;
+    margin-right: 5px;
+  }
+  
+  .subscribe-form {
+    display: flex;
+    margin-top: 10px;
+    max-width: 300px;
+  }
+  
+  .subscribe-form input {
+    padding: 8px 10px;
+   /* flex: 1;  */
+    border: 6px;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-right: 10px;
+  }
+  
+  .subscribe-form button {
+    margin: 8px;
+    padding: 2px 15px;
+    background-color: #ff4b4b;
+    color: white;
+    border: 2px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+  }
+  
+  .subscribe-form button:hover {
+    background-color: #e13b3b;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    border-top: 1px solid #444;
+    margin-top: 30px;
+    padding-top: 15px;
+    font-size: 13px;
+    color: #aaa;
+  }
+  body {
+    overflow-x: hidden;
+  }

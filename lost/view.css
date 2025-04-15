@@ -1,0 +1,264 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f9f9f9;
+    padding: 0px;
+    margin:0px;
+    background-color: #28282b;
+  }
+  html{
+    overflow-x: hidden;
+}
+
+  .container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    background-color: #28282b;
+  }
+
+  .filters {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .filters input,
+  .filters select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+  }
+
+  .view-toggle {
+    margin-left: auto;
+  }
+
+  .cards {
+    display: flex;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 10px;
+  }
+
+  .card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s;
+  }
+
+  .card:hover {
+    transform: translateY(-3px);
+  }
+
+  .card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .card-body {
+    padding: 15px;
+  }
+
+  .card-body h4 {
+    margin: 5px 0;
+  }
+
+  .meta {
+    font-size: 14px;
+    color: #555;
+    margin: 4px 0;
+  }
+
+  .badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: red;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+  }
+
+  .badge.found {
+    background: #28a745;
+  }
+
+  .card-footer {
+    padding: 10px 15px;
+    border-top: 1px solid #eee;
+  }
+
+  .card-footer button {
+    width: 100%;
+    padding: 8px;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  .card-wrapper {
+    position: relative;
+  }
+
+  .results-info {
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #666;
+  }
+
+
+  .navbar {
+    background-color: #ffffff;
+    color: #000;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 12vh;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+  
+  .logo-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+  
+  .sub-title {
+    font-weight: 300;
+    margin-left: 5px;
+  }
+  
+  .navbar-links {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-right: 50px;
+  }
+  
+  .navbar a {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar a:hover {
+    color: #007bff;
+  }
+  
+  .navbar-icon{
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    padding: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .navbar-icon:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.1);
+  }
+  .footer {
+    background-color: #0d1117;
+    color: #ffffff;
+    padding: 40px 20px 20px;
+    font-family: Arial, sans-serif;
+    width:100vw;
+    margin-top: 30px;
+  }
+  
+  .footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .footer-section {
+    flex: 1 1 250px;
+  }
+  
+  .footer h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .footer p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  
+  .footer-icon {
+    color: red;
+    margin-right: 5px;
+  }
+  
+  .subscribe-form {
+    display: flex;
+    margin-top: 10px;
+    max-width: 300px;
+  }
+  
+  .subscribe-form input {
+    padding: 8px 10px;
+   /* flex: 1;  */
+    border: 6px;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-right: 10px;
+  }
+  
+  .subscribe-form button {
+    margin: 8px;
+    padding: 2px 15px;
+    background-color: #ff4b4b;
+    color: white;
+    border: 2px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+  }
+  
+  .subscribe-form button:hover {
+    background-color: #e13b3b;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    border-top: 1px solid #444;
+    margin-top: 30px;
+    padding-top: 15px;
+    font-size: 13px;
+    color: #aaa;
+  }
+  body {
+    overflow-x: hidden;
+  }
+  
+  
+  html{
+    overflow-x: hidden;
+  }

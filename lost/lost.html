@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="lost.css">
+    <script src="alerts.js"></script>
+    
+</head>
+<body>
+
+  <div class="navbar">
+    <div class="logo-title">
+      <img src="/assests/icons8-bell-50.svg" alt="bell" />
+      <div class="title">Safety Watch: <span class="sub-title">Beacon Alerts</span></div>
+    </div>
+    <div class="navbar-links">
+      
+      <img src="/assests/home-svgrepo-com.svg" alt="home" class="navbar-icon" />
+      <a href="#">Home</a>
+      <img src="/assests/info-circle-svgrepo-com.svg" alt="about" class="navbar-icon" />
+      <a href="#footer">about</a>
+      <img src="/assests/alert-triangle-svgrepo-com.svg" alt="alerts" class="navbar-icon" />
+      <a href="/alerts/alerts.html">alerts</a>
+      <img src="/assests/heart-pulse-svgrepo-com.svg" alt="donate" class="navbar-icon" />
+      <a href="/donate/donate.html">donate</a>
+      <img src="/assests/people-svgrepo-com.svg" alt="lost & found" class="navbar-icon" />
+      <a href="/lost/lost.html">Lost & Found</a>
+      <img src="/assests/login-svgrepo-com.svg" alt="login" class="navbar-icon" />
+      <a href="login/login.html" id="login-button-navbar">login</a>
+      
+
+
+
+
+    </div>
+  </div>
+    <div class="container">
+        <nav class="navbar">
+          <button>Report Missing Person</button>
+          <button><a href="/lost/find.html"> by Photo</a></button>
+          <button><a href="/lost/view.html">View Missing Persons</a></button>
+        </nav>
+    
+        <form class="form">
+          <h2>Report a Missing Person</h2>
+          <p>Provide detailed information to help locate the missing individual.</p>
+          
+          <div class="form-group">
+            <label>Full Name *</label>
+            <input type="text" placeholder="Enter full name" required>
+          </div>
+    
+          <div class="form-group">
+            <label>Father's Name *</label>
+            <input type="text" placeholder="Enter father's name" required>
+          </div>
+    
+          <div class="form-group">
+            <label>Mother's Name *</label>
+            <input type="text" placeholder="Enter mother's name" required>
+          </div>
+    
+          <div class="form-group">
+            <label>Social Security Number *</label>
+            <input type="text" placeholder="Enter SSN" required>
+            <small>Your data is encrypted and protected. Only authorized personnel can access this information.</small>
+          </div>
+    
+          <div class="row">
+            <div class="form-group">
+              <label>Last Seen Date</label>
+              <input type="date">
+            </div>
+    
+            <div class="form-group">
+              <label>Last Known Location</label>
+              <input type="text" placeholder="City, State">
+            </div>
+          </div>
+    
+          <div class="form-group photo-upload">
+            <label>Photo *</label>
+            <div class="upload-box">
+              <input type="file" accept="image/png, image/jpeg, image/gif" required>
+              <p>Click to upload a photo<br><small>PNG, JPG, GIF up to 5MB</small></p>
+            </div>
+          </div>
+    
+          <div class="form-group">
+            <label>Description</label>
+            <textarea placeholder="Provide physical characteristics, clothing worn when last seen, distinguishing features, etc."></textarea>
+          </div>
+    
+          <div class="form-group">
+            <label>Contact Information</label>
+            <textarea placeholder="Your contact information for follow-ups on this case"></textarea>
+          </div>
+        </form>
+      </div>
+    
+</body>
+</html>
+

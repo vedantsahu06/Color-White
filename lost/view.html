@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="view.css">
+</head>
+<body>
+
+
+  <div class="navbar">
+    <div class="logo-title">
+      <img src="/assests/icons8-bell-50.svg" alt="bell" />
+      <div class="title">Safety Watch: <span class="sub-title">Beacon Alerts</span></div>
+    </div>
+    <div class="navbar-links">
+      
+      <img src="/assests/home-svgrepo-com.svg" alt="home" class="navbar-icon" />
+      <a href="#">Home</a>
+      <img src="/assests/info-circle-svgrepo-com.svg" alt="about" class="navbar-icon" />
+      <a href="#footer">about</a>
+      <img src="/assests/alert-triangle-svgrepo-com.svg" alt="alerts" class="navbar-icon" />
+      <a href="/alerts/alerts.html">alerts</a>
+      <img src="/assests/heart-pulse-svgrepo-com.svg" alt="donate" class="navbar-icon" />
+      <a href="/donate/donate.html">donate</a>
+      <img src="/assests/people-svgrepo-com.svg" alt="lost & found" class="navbar-icon" />
+      <a href="/lost/lost.html">Lost & Found</a>
+      <img src="/assests/login-svgrepo-com.svg" alt="login" class="navbar-icon" />
+      <a href="login/login.html" id="login-button-navbar">login</a>
+      
+
+
+
+
+    </div>
+  </div>
+    <div class="container">
+        <div class="filters">
+          <input type="text" placeholder="Search by name, ID, or location">
+          <select>
+            <option>All Statuses</option>
+            <option>Missing</option>
+            <option>Found</option>
+          </select>
+          <select>
+            <option>All Locations</option>
+            <option>Central District</option>
+            <option>Western District</option>
+          </select>
+          <!-- <div class="view-toggle">
+            <button>Grid</button>
+            <button>List</button>
+          </div> -->
+        </div>
+    
+        <div class="results-info">Showing 6 people</div>
+    
+        <div class="cards">
+    
+          <!-- Card 1 -->
+          <div class="card-wrapper">
+            <div class="badge">Missing</div>
+            <div class="card">
+              <img src="https://randomuser.me/api/portraits/women/1.jpg" alt="">
+              <div class="card-body">
+                <h4>Jane Doe</h4>
+                <div class="meta">Age: 32 • Female</div>
+                <div class="meta">Last seen: 4/10/2025</div>
+                <div class="meta">Central District</div>
+              </div>
+              <div class="card-footer">
+                <button>View Details</button>
+              </div>
+            </div>
+          </div>
+    
+          <!-- Card 2 -->
+          <div class="card-wrapper">
+            <div class="badge">Missing</div>
+            <div class="card">
+              <img src="https://randomuser.me/api/portraits/men/2.jpg" alt="">
+              <div class="card-body">
+                <h4>Robert Smith</h4>
+                <div class="meta">Age: 45 • Male</div>
+                <div class="meta">Last seen: 4/12/2025</div>
+                <div class="meta">Eastern Region</div>
+              </div>
+              <div class="card-footer">
+                <button>View Details</button>
+              </div>
+            </div>
+          </div>
+    
+          <!-- Card 3 -->
+          <div class="card-wrapper">
+            <div class="badge">Missing</div>
+            <div class="card">
+              <img src="https://randomuser.me/api/portraits/women/3.jpg" alt="">
+              <div class="card-body">
+                <h4>Emily Johnson</h4>
+                <div class="meta">Age: 28 • Female</div>
+                <div class="meta">Last seen: 4/11/2025</div>
+                <div class="meta">Western District</div>
+              </div>
+              <div class="card-footer">
+                <button>View Details</button>
+              </div>
+            </div>
+          </div>
+    
+          <!-- Card 4 -->
+          <div class="card-wrapper">
+            <div class="badge found">Found</div>
+            <div class="card">
+              <img src="https://randomuser.me/api/portraits/men/4.jpg" alt="">
+              <div class="card-body">
+                <h4>David Williams</h4>
+                <div class="meta">Age: 52 • Male</div>
+                <div class="meta">Last seen: 4/8/2025</div>
+                <div class="meta">Northern Region</div>
+              </div>
+              <div class="card-footer">
+                <button>View Details</button>
+              </div>
+            </div>
+          </div>
+    
+          <!-- Card 5 -->
+          <div class="card-wrapper">
+            <div class="badge">Missing</div>
+            <div class="card">
+              <img src="https://randomuser.me/api/portraits/women/5.jpg" alt="">
+              <div class="card-body">
+                <h4>Sophia Chen</h4>
+                <div class="meta">Age: 19 • Female</div>
+                <div class="meta">Last seen: 4/13/2025</div>
+                <div class="meta">University District</div>
+              </div>
+              <div class="card-footer">
+                <button>View Details</button>
+              </div>
+            </div>
+          </div>
+    
+          <!-- Card 6 -->
+          <div class="card-wrapper">
+            <div class="badge found">Found</div>
+            <div class="card">
+              <img src="https://randomuser.me/api/portraits/men/6.jpg" alt="">
+              <div class="card-body">
+                <h4>James Wilson</h4>
+                <div class="meta">Age: 67 • Male</div>
+                <div class="meta">Last seen: 4/9/2025</div>
+                <div class="meta">Southern District</div>
+              </div>
+              <div class="card-footer">
+                <button>View Details</button>
+              </div>
+            </div>
+          </div>
+    
+        </div>
+      </div>
+
+
+      <footer class="footer" id="footer">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3><span class="footer-icon">🔔</span> Safety Watch: Beacon Alerts</h3>
+            <p>Providing critical alerts and information during emergencies. Stay informed, stay safe.</p>
+          </div>
+      
+          <div class="footer-section">
+            <h3>Emergency Contacts</h3>
+            <p>📞 Emergency Hotline: <strong>1-800-SAFE-NOW</strong></p>
+            <p>📧 Report Critical Information: <br><strong>report@safetywatch.org</strong></p>
+          </div>
+      
+          <div class="footer-section">
+            <h3>Stay Updated</h3>
+            <p>Sign up to receive real-time alerts directly to your device.</p>
+            <form class="subscribe-form">
+              <input type="email" placeholder="Your email" required>
+              <button type="submit">Subscribe</button>
+            </form>
+          </div>
+        </div>
+      
+        <div class="footer-bottom">
+          <p>© 2025 Safety Watch: Beacon Alerts. All rights reserved.</p>
+        </div>
+      </footer>
+    
+</body>
+</html>
