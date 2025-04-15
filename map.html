@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Interactive Emergency Map</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #28282b;
+      padding: 30px;
+    }
+
+    .container {
+      background: #28282b;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      margin-bottom: 5px;
+    }
+
+    #map {
+      height: 500px;
+      width: 100%;
+      border-radius: 8px;
+      margin: 20px 0;
+    }
+
+    .legend {
+      background: #fff;
+      padding: 10px;
+      font-size: 14px;
+      border-radius: 6px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+      line-height: 1.6;
+    }
+
+    .legend span {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      margin-right: 8px;
+      border-radius: 50%;
+    }
+
+    .zone-label {
+      color: white;
+      font-weight: bold;
+      padding: 2px 6px;
+      border-radius: 12px;
+      font-size: 12px;
+    }
+
+    .update-time {
+      font-size: 13px;
+      color: #FFF;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .controls {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 10px;
+    }
+
+    .btn {
+      padding: 6px 12px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      background: #fff;
+      cursor: pointer;
+      font-weight: 500;
+    }
+
+    .btn:hover {
+      background: #f0f0f0;
+    }
+
+    .icon {
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container" style="background-color: #28282b;">
+  <h2 style="color: #FFF; font-size: xxx-large;">Interactive Emergency Map</h2>
+  <p style="color: #FFF;">View affected areas and emergency resources .</p>
+
+  <div id="map"></div>
+
+  <div class="controls">
+    <div class="update-time">
+      📍 Last updated: April 14, 2025 – 10:30
+    </div>
+    <div>
+      <button class="btn" onclick="resetView()">Reset View</button>
+      <button class="btn" onclick="locateUser()">Show my location</button>
+    </div>
+  </div>
+</div>
+
+<!-- Leaflet JS -->
+<script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+<script>
+  const map = L.map('map').setView([28.67,77.06], 3); // 
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; OpenStreetMap contributors',
+  }).addTo(map);
+
+  // Alert Zones
+  const zones = [
+    {
+      name: "Kashmir",
+      coords:  [[33.8, 73.8],[35.9,79.9]],
+      
+      color: "#e74c3c",
+    },
+    {
+      name: "Ukraine",
+      coords: [[46.6, 32.6], [49.9, 37.8]],
+      color: "#e67e22",
+    },
+    {
+      name: "Gaza",
+      coords: [[31.5,34.4 ], [31.77, 35.23]],
+      color: "#f1c40f",
+    },
+    {
+      name: "Manipur",
+      coords: [[24.3,93.12 ], [24.81, 93.93]],
+      color: "#3498db",
+    },
+
+    
+    {
+      name:"Khartoum",
+      coords:[[32.5,15.5 ], [32.6, 15.6]],
+      color:"#9b59b6",
+    },
+
+    {
+      name:"Darfur",
+      coords:[[24.5,12.5 ], [25.5, 14.5]],
+      color:"pink",
+    },
+    {
+      name:"Myanmar",
+      coords:[[96.1,16.8 ], [96.3, 16.9]],
+      color:"lavender",
+    },
+    {
+      name:"Yemen",
+      coords:[[44.1,15.3 ], [44.3,15.4]],
+      color:"darkorange",
+    },
+
+    {
+      name:"Somalia",
+      coords:[[45.3,2.0], [45.4, 2.1]],
+      color:"Darkred",
+    },
+
+
+
+
+
+  ];
+
+  zones.forEach(zone => {
+    const bounds = [[zone.coords[0][0], zone.coords[0][1]], [zone.coords[1][0], zone.coords[1][1]]];
+    const rect = L.rectangle(bounds, {
+      color: zone.color,
+      weight: 1,
+      fillOpacity: 0.4,
+    }).addTo(map);
+
+    const labelLatLng = [
+      (zone.coords[0][0] + zone.coords[1][0]) / 2,
+      (zone.coords[0][1] + zone.coords[1][1]) / 2
+    ];
+
+    L.marker(labelLatLng, {
+      icon: L.divIcon({
+        className: 'zone-label',
+        html: `<div style="background:${zone.color}">${zone.name}</div>`,
+        iconSize: [60, 20]
+      })
+    }).addTo(map);
+  });
+
+  // Locate User
+  let userMarker;
+  function locateUser() {
+    map.locate({ setView: true, maxZoom: 14 });
+  }
+
+  map.on('locationfound', (e) => {
+    if (userMarker) {
+      map.removeLayer(userMarker);
+    }
+    userMarker = L.marker(e.latlng).addTo(map).bindPopup("Your Location").openPopup();
+  });
+
+  map.on('locationerror', () => {
+    alert("Unable to retrieve your location.");
+  });
+
+  // Reset View
+  function resetView() {
+    map.setView([28.67,77.06], 3);
+  }
+</script>
+
+</body>
+</html>
