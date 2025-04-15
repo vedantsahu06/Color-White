@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="alerts.css">
+    <script src="alerts.js"></script>
+    
+</head>
+<body>
+
+
+  <div class="navbar">
+    <div class="logo-title">
+      <img src="/assests/icons8-bell-50.svg" alt="bell" />
+      <div class="title">Safety Watch: <span class="sub-title">Beacon Alerts</span></div>
+    </div>
+    <div class="navbar-links">
+      
+      <img src="/assests/home-svgrepo-com.svg" alt="home" class="navbar-icon" />
+      <a href="#">Home</a>
+      <img src="/assests/info-circle-svgrepo-com.svg" alt="about" class="navbar-icon" />
+      <a href="#footer">about</a>
+      <img src="/assests/alert-triangle-svgrepo-com.svg" alt="alerts" class="navbar-icon" />
+      <a href="/alerts/alerts.html">alerts</a>
+      <img src="/assests/heart-pulse-svgrepo-com.svg" alt="donate" class="navbar-icon" />
+      <a href="/donate/donate.html">donate</a>
+      <img src="/assests/people-svgrepo-com.svg" alt="lost & found" class="navbar-icon" />
+      <a href="/lost/lost.html">Lost & Found</a>
+      <img src="/assests/login-svgrepo-com.svg" alt="login" class="navbar-icon" />
+      <a href="login/login.html" id="login-button-navbar">login</a>
+      
+
+
+
+
+    </div>
+  </div>
+
+
+    <section class="alerts-center">
+        <div class="alerts-header">
+          <div>
+            <h1>⚠️ Emergency Alerts Center</h1>
+            <p>Official government-issued emergency information and safety instructions for your region.</p>
+          </div>
+          <div class="buttons">
+            <button class="report-btn">⚠️ Report Emergency</button>
+            <button class="subscribe-btn">🔔 Subscribe to Alerts</button>
+          </div>
+        </div>
+      
+        <div class="alerts-grid">
+          <div class="alert-box critical">
+            <div>
+              <p>Critical Alerts</p>
+              <h2>2</h2>
+            </div>
+            <span class="icon">⚠️</span>
+          </div>
+          <div class="alert-box warning">
+            <div>
+              <p>Warning Alerts</p>
+              <h2>2</h2>
+            </div>
+            <span class="icon">🔔</span>
+          </div>
+          <div class="alert-box advisory">
+            <div>
+              <p>Advisory Alerts</p>
+              <h2>1</h2>
+            </div>
+            <span class="icon">🔔</span>
+          </div>
+          <div class="alert-box info">
+            <div>
+              <p>Information</p>
+              <h2>1</h2>
+            </div>
+            <span class="icon">🔔</span>
+          </div>
+        </div>
+      </section>
+
+      <h1 style="color: white; text-align: center;">Current Government Alerts</h1>
+
+      <!-- news -->
+      <div class="news-container">
+
+        <!-- Evacuation Alert -->
+        <div class="alert-box evacuation">
+          <div class="alert-news-header">
+            <span>📍</span>
+            <h3>Immediate Evacuation Order:Coastal Zone</h3>
+            <span class="status-news-dot"></span>
+            <span class="alert-news-tag">Evacuation</span>
+          </div>
+          <div class="alert-news-meta">
+            <span>📍 Coastal Zone-A Regions</span>
+            <span>🕒 April 14, 2025 - 08:15</span>
+          </div>
+        </div>
+    
+        <!-- National Emergency Alert - Blue -->
+        <div class="alert-box update-blue">
+          <div class="alert-news-header">
+            <span>🏁</span>
+            <h3>National Emergency Alert System Testing</h3>
+            <span class="alert-news-tag">Situation Update</span>
+          </div>
+          <div class="alert-news-meta">
+            <span>📍 All Districts</span>
+            <span>🕒 April 13, 2025 - 16:45</span>
+          </div>
+        </div>
+    
+        <!-- Medical Supply Distribution - Orange -->
+        <div class="alert-box update-orange">
+          <div class="alert-news-header">
+            <span>🩺</span>
+            <h3>Medical Supply Distribution Program</h3>
+            <span class="alert-news-tag">Situation Update</span>
+          </div>
+          <div class="alert-news-meta">
+            <span>📍 Southern Regions</span>
+            <span>🕒 April 13, 2025 - 11:20</span>
+          </div>
+          
+        </div>
+    
+      </div>
+
+
+      
+
+
+
+
+
+      <!-- emergency -->
+
+      <div class="accordion-container">
+        <h2>Emergency Resources</h2>
+    
+        <!-- Emergency Contact Numbers -->
+        <div class="accordion-item">
+          <div class="accordion-header" onclick="toggleAccordion(this)">
+            Emergency Contact Numbers
+            <span class="arrow">▾</span>
+          </div>
+          <div class="accordion-content">
+            <div class="contact-list">
+              <div><span>National Emergency Hotline</span><span>911</span></div>
+              <div><span>Medical Emergency</span><span>108</span></div>
+              <div><span>Crisis Support Line</span><span>800-555-1234</span></div>
+              <div><span>Shelter Information</span><span>800-555-9876</span></div>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Evacuation Centers -->
+        <div class="accordion-item">
+          <div class="accordion-header" onclick="toggleAccordion(this)">
+            Evacuation Centers
+            <span class="arrow">▾</span>
+          </div>
+          <div class="accordion-content">
+            <p>List of designated evacuation centers will appear here.</p>
+          </div>
+        </div>
+    
+        <!-- Emergency Supply Checklist -->
+        <div class="accordion-item">
+          <div class="accordion-header" onclick="toggleAccordion(this)">
+            Emergency Supply Checklist
+            <span class="arrow">▾</span>
+          </div>
+          <div class="accordion-content">
+            <ul>
+              <li>Water (1 gallon per person per day)</li>
+              <li>Non-perishable food</li>
+              <li>First-aid kit</li>
+              <li>Flashlight with batteries</li>
+              <li>Medications</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- faq -->
+    <div class="faq-container">
+      <h2>Frequently Asked Questions</h2>
+  
+      <!-- Question 1 -->
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+          What should I do during a curfew?
+          <span class="arrow">▾</span>
+        </div>
+        <div class="faq-answer">
+          During a government-mandated curfew, all residents must remain indoors during the specified hours.
+          Keep doors and windows secure, and have emergency supplies accessible. Only emergency services personnel 
+          and those with special authorization are permitted outside. Violations may result in detention or fines.
+        </div>
+      </div>
+  
+      <!-- Question 2 -->
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+          How do I know if my area is under evacuation orders?
+          <span class="arrow">▾</span>
+        </div>
+        <div class="faq-answer">
+          Evacuation orders are issued via official channels such as emergency broadcasts, alerts, or local authorities.
+          Stay tuned to radio, TV, or official websites for updates.
+        </div>
+      </div>
+  
+      <!-- Question 3 -->
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+          What should I bring to an evacuation center?
+          <span class="arrow">▾</span>
+        </div>
+        <div class="faq-answer">
+          Bring essential items like ID, medication, clothes, important documents, water, snacks, a flashlight, and 
+          a phone charger. If possible, bring bedding or sleeping gear.
+        </div>
+      </div>
+  
+      <!-- Question 4 -->
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+          How are emergency alerts verified?
+          <span class="arrow">▾</span>
+        </div>
+        <div class="faq-answer">
+          Emergency alerts are issued and verified by government agencies using official communication systems and 
+          verified information sources. Always confirm alerts through trusted platforms.
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+    <footer class="footer" id="footer">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3><span class="footer-icon">🔔</span> Safety Watch: Beacon Alerts</h3>
+          <p>Providing critical alerts and information during emergencies. Stay informed, stay safe.</p>
+        </div>
+    
+        <div class="footer-section">
+          <h3>Emergency Contacts</h3>
+          <p>📞 Emergency Hotline: <strong>1-800-SAFE-NOW</strong></p>
+          <p>📧 Report Critical Information: <br><strong>report@safetywatch.org</strong></p>
+        </div>
+    
+        <div class="footer-section">
+          <h3>Stay Updated</h3>
+          <p>Sign up to receive real-time alerts directly to your device.</p>
+          <form class="subscribe-form">
+            <input type="email" placeholder="Your email" required>
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    
+      <div class="footer-bottom">
+        <p>© 2025 Safety Watch: Beacon Alerts. All rights reserved.</p>
+      </div>
+    </footer>
+
+
+      
+      
+    
+</body>
+</html>
